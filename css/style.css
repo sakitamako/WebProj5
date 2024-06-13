@@ -1,21 +1,22 @@
 table {
     width: auto;
     border-spacing: 0;
-    font-size:14px;
+    font-size: 14px;
 }
+
 table th {
     color: #fff;
     padding: 8px 15px;
     background: #258;
-    background:-moz-linear-gradient(rgba(34, 85, 136, 0.7), rgba(34, 85, 136, 0.9) 50%);
-    background:-webkit-gradient(linear, 100% 0%, 100% 50%, from(rgba(34, 85, 136, 0.7)), to(rgba(34, 85, 136, 0.9)));
+    background: -moz-linear-gradient(rgba(34, 85, 136, 0.7), rgba(34, 85, 136, 0.9) 50%);
+    background: -webkit-gradient(linear, 100% 0%, 100% 50%, from(rgba(34, 85, 136, 0.7)), to(rgba(34, 85, 136, 0.9)));
     font-weight: bold;
-    border-left:1px solid #258;
-    border-top:1px solid #258;
-    border-bottom:1px solid #258;
+    border-left: 1px solid #258;
+    border-top: 1px solid #258;
+    border-bottom: 1px solid #258;
     line-height: 120%;
     text-align: center;
-    text-shadow:0 -1px 0 rgba(34, 85, 136, 0.9);
+    text-shadow: 0 -1px 0 rgba(34, 85, 136, 0.9);
     box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3) inset;
 }
 
@@ -24,8 +25,8 @@ table th: first-child {
 }
 
 table th: last-child {
-    border-radius:0 5px 0 0;
-    border-right:1px solid #258;
+    border-radius: 0 5px 0 0;
+    border-right: 1px solid #258;
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1),0px 1 px 1px rgba(255, 255, 255, 0.3) inset;
 }
 
@@ -57,7 +58,7 @@ table tr: last-child td: first-child {
 }
 
 table tr: last-child td: last-child {
-    border-radius: 0 0 5 px 0;
+    border-radius: 0 0 5px 0;
 }
 
 tab le tr:h over {

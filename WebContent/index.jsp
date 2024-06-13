@@ -8,7 +8,7 @@
     <head>
     <!-- 実行した時のブラウザに表示されるサブミットの部分 -->
     <!-- "HelloStrutsAction"の部分はstruts.xmlファイルの一部分にアクションし,整理した情報を次のページで表示する -->
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
         <title>INDEX</title>
     </head>
     <body>
