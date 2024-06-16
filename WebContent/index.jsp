@@ -22,6 +22,21 @@
 
         <s:form action="InquiryAction">
             <s:submit value="問い合わせ"/>
-        a</s:form>
+        </s:form>
+
+        <br>
+        <h3>新規ユーザー登録</h3>
+        GET 通信
+        <s:form method="get" action="TestAction">
+            <s:textfield name="username"/>
+            <s:password name="password"/>
+            <s:submit value="送信"/>
+        </s:form>
+        POST 通信
+        <s:form method="post" action="TestAction">
+            <s:textfield name="username"/>
+            <s:password name="password"/>
+            <s:submit value="送信"/>
+        </s:form>
     </body>
 </html>

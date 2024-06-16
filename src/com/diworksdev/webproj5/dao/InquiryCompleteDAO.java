@@ -59,7 +59,9 @@ public class InquiryCompleteDAO {
 				//LoginDTOクラスのsetName、setPassword（setter）を利用
 				dto.setName(rs.getString("name"));
 				dto.setQtype(rs.getString("qtype"));
-				dto.setBody(rs.getString("body")); inquiryDTOList.add(dto);
+				dto.setBody(rs.getString("body"));
+
+				inquiryDTOList.add(dto);
 
 			}
 
