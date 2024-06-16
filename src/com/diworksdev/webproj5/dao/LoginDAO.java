@@ -61,7 +61,7 @@ public class LoginDAO {
 			//データが存在している限り表示する
 			while (rs.next()) {
 
-				LoginDTO dto=new LoginDTO();
+				LoginDTO dto = new LoginDTO();
 
 				//⑧結果の処理（select文で取得した値をDTOに格納）
 				//select文でDBから取得した情報をString型に変換してDTOクラスに格納
@@ -77,7 +77,9 @@ public class LoginDAO {
 			if (loginDTOList.size() <= 0) {
 
 				//インスタンス化
-				LoginDTO dto = new LoginDTO(); dto.setUsername("該当なし");
+				LoginDTO dto = new LoginDTO(); 
+				
+				dto.setUsername("該当なし");
 
 				//⑧結果の処理（select文で取得した値をDTOに格納）
 				//select文でDBから取得した情報をString型に変換してDTOクラスに格納

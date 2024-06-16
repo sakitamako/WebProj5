@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.struts2.interceptor.SessionAware;
+
 import com.diworksdev.webproj5.dao.LoginDAO;
 import com.diworksdev.webproj5.dto.LoginDTO;
 import com.opensymphony.xwork2.ActionSupport;
@@ -12,7 +14,7 @@ import com.opensymphony.xwork2.ActionSupport;
 //（Actionクラスは基本的にこのクラスを継承）
 //LoginAciton（子クラス） extends（継承） ActionSupport（親クラス）
 //すでにあるクラスとにたクラスを作る場合、元のクラスに必要な機能だけを追加する形で、新しいクラスを作ることを継承
-public class LoginAction extends ActionSupport {
+public class LoginAction extends ActionSupport implements SessionAware {
 
 	//フィールド変数
 	//JSPから受け取る値、ここではnameとpassword を定義
@@ -30,7 +32,7 @@ public class LoginAction extends ActionSupport {
 	public String execute() {
 
 		//メソッドの戻り値「ret」 String ret = ERROR; を定義し、初期値としてERRORを代入
-		String ret =ERROR;
+		String ret = ERROR;
 
 		System.out.println(username);
 		System.out.println(password);
