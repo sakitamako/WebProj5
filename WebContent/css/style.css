@@ -47,7 +47,7 @@ table tr {
     background: #fff;
 }
 
-table tr: nth-child(2n+1) {
+table tr:nth-child(2n+1) {
     background: #f1f6fc;
 }
 
