@@ -22,6 +22,6 @@
 
         <s:form action="InquiryAction">
             <s:submit value="問い合わせ"/>
-        </s:form>
+        a</s:form>
     </body>
 </html>
