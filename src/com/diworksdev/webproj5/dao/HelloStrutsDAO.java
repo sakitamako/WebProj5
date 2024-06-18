@@ -10,6 +10,8 @@ import java.util.List;
 import com.diworksdev.webproj5.dto.HelloStrutsDTO;
 import com.diworksdev.webproj5.util.DBConnector;
 
+//DAOクラスでは、Actionから送られてきた情報を使ってDBへ問い合わせを行うファイル
+//問い合わせて取得した値をDTOクラスに格納するファイル
 public class HelloStrutsDAO {
 
 	//インスタンス化

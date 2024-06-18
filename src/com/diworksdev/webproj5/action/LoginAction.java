@@ -10,10 +10,16 @@ import com.diworksdev.webproj5.dao.LoginDAO;
 import com.diworksdev.webproj5.dto.LoginDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
+//Actionクラスでは、画面から送られてきたリクエストを取得する
+//内部処理に応じてDAOやDTOクラスを呼び出し、最終的に次のJSPへ値を返すファイル
+
 //struts2が持つActionSupportというクラスを継承
 //（Actionクラスは基本的にこのクラスを継承）
 //LoginAciton（子クラス） extends（継承） ActionSupport（親クラス）
 //すでにあるクラスとにたクラスを作る場合、元のクラスに必要な機能だけを追加する形で、新しいクラスを作ることを継承
+//実際の処理を持たない、ちょっと変わったクラス=implements
+//Java7までは実装は持てず、メソッドのシグニチャのみの定義
+//interfaceを使って型宣言を行うことができますが、メソッドの定義がないとプログラムは実行できないので、そこで使うのがimplements
 public class LoginAction extends ActionSupport implements SessionAware {
 
 	//フィールド変数

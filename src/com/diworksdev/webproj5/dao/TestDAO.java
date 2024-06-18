@@ -10,6 +10,8 @@ import java.util.List;
 import com.diworksdev.webproj5 .dto.LoginDTO;
 import com.diworksdev.webproj5.util.DBConnector;
 
+//DAOクラスでは、Actionから送られてきた情報を使ってDBへ問い合わせを行うファイル
+//問い合わせて取得した値をDTOクラスに格納するファイル
 public class TestDAO {
 
 	//インスタンス化
@@ -93,6 +95,12 @@ public class TestDAO {
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
 
+		//sql文を書く
+		//SELECT データを抽出する
+		//＊ テーブルに含まれる項目全て
+		//FROM 〇〇 〇〇という名前のテーブルからデータを選択する
+		//④sql文を書く：値は ? を入れておく（どんな値でも使いまわしできるようにするため
+		//?に入る条件を満たしたデータがsqlに代入される
 		String sql = "select * from users where user_name=? and password=?";
 
 		//try.catchはjavaの例外処理のための構文

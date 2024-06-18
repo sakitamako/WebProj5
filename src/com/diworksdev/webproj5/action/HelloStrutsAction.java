@@ -10,6 +10,9 @@ import com.diworksdev.webproj5.dao.HelloStrutsDAO;
 import com.diworksdev.webproj5.dto.HelloStrutsDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
+//Actionクラスでは、画面から送られてきたリクエストを取得する
+//内部処理に応じてDAOやDTOクラスを呼び出し、最終的に次のJSPへ値を返すファイル
+
 //struts2が持つActionSupportというクラスを継承
 //（Actionクラスは基本的にこのクラスを継承）
 //LoginAciton（子クラス） extends（継承） ActionSupport（親クラス）
@@ -29,6 +32,7 @@ public class HelloStrutsAction extends ActionSupport implements SessionAware {
 	//管理コマンド・メッセージをコマンド・サーバーに送信し、何らかの応答メッセージを待ちます
 	public String execute() {
 
+		//メソッドの戻り値「ret」 String ret = ERROR; を定義し、初期値としてERRORを代入
 		String ret = ERROR;
 
 		//②HelloStrutsDAOとHelloStrutsDTOのインスタンス化
@@ -50,8 +54,7 @@ public class HelloStrutsAction extends ActionSupport implements SessionAware {
 			ret = ERROR;
 		}
 
-		//戻り値
-		//処理結果を返す
+		//retに入った値を呼び出し元であるActionクラスに渡す
 		return ret;
 
 	}

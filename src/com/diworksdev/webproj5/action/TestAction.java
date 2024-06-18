@@ -10,12 +10,21 @@ import com.diworksdev.webproj5.dao.TestDAO;
 import com.diworksdev.webproj5.dto.LoginDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
+//Actionクラスでは、画面から送られてきたリクエストを取得する
+//内部処理に応じてDAOやDTOクラスを呼び出し、最終的に次のJSPへ値を返すファイル
+
 //struts2が持つActionSupportというクラスを継承
 //（Actionクラスは基本的にこのクラスを継承）
 //LoginAciton（子クラス） extends（継承） ActionSupport（親クラス）
 //すでにあるクラスとにたクラスを作る場合、元のクラスに必要な機能だけを追加する形で、新しいクラスを作ることを継承
+//実際の処理を持たない、ちょっと変わったクラス=implements
+//Java7までは実装は持てず、メソッドのシグニチャのみの定義
+//interfaceを使って型宣言を行うことができますが、メソッドの定義がないとプログラムは実行できないので、そこで使うのがimplements
 public class TestAction extends ActionSupport implements SessionAware {
 
+	//フィールド変数
+	//JSPから受け取る値、ここではnameとpassword を定義
+	//※必ずJSPでの定義と同じ名前にする
 	private String username;
 	private String password;
 
@@ -27,6 +36,7 @@ public class TestAction extends ActionSupport implements SessionAware {
 	//管理コマンド・メッセージをコマンド・サーバーに送信し、何らかの応答メッセージを待ちます
 	public String execute() {
 
+		//メソッドの戻り値「ret」 String ret = ERROR; を定義し、初期値としてERRORを代入
 		String ret = ERROR;
 
 		//②インスタンス化
@@ -51,8 +61,7 @@ public class TestAction extends ActionSupport implements SessionAware {
 
 		session.put("loginDTOList", loginDTOList);
 
-		//戻り値
-		//処理結果を返す
+		//retに入った値を呼び出し元であるActionクラスに渡す
 		return ret;
 	}
 

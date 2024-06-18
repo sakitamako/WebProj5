@@ -11,7 +11,7 @@
         <title>HelloStruts</title>
     </head>
     <body>
-    <!-- strutsファイルのhelloStrutsDTOList部分がsuccessの場合に表示される  -->
+    <!-- strutsファイルにアクションし処理結果がsuccessの場合に表示される  -->
         <h1>HelloStruts2!</h1>
         <br>
         <table>
