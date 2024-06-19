@@ -13,6 +13,7 @@ public class HelloStrutsDTO {
 	//Actionクラスから呼び出され、userIdフィールドの値をActionに渡す
 	public int getUserId() {
 		return userId;
+
 	}
 
 	//DAOクラスから呼び出され、引数として受け取ったテーブルの値を自身のuserIdフィールドに格納

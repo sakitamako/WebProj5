@@ -22,7 +22,8 @@ import com.opensymphony.xwork2.ActionSupport;
 //interfaceを使って型宣言を行うことができますが、メソッドの定義がないとプログラムは実行できないので、そこで使うのがimplements
 public class HelloStrutsAction extends ActionSupport implements SessionAware {
 
-	//インスタンス化
+	//インスタンス化=コピーしたものを変数に代入
+	//カプセル化、private=自分のクラスのみ
 	private List<HelloStrutsDTO> helloStrutsDTOList = new ArrayList<HelloStrutsDTO>();
 
 	//session=あるグループが共通の活動を行う〕集まり、集会
