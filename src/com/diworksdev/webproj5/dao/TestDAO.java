@@ -15,6 +15,10 @@ import com.diworksdev.webproj5.util.DBConnector;
 public class TestDAO {
 
 	//インスタンス化
+	//ArrayList=public ArrayList() 初期容量10で空のリストを作成
+	//java.util.List<LoginDTO>順序付けられたコレクション。シーケンスとも呼ばれる。
+	//このインタフェースのユーザーは、リスト内のどこに各要素が挿入されるかを精密に制御できる。
+	//ユーザーは整数値のインデックス(リスト内の位置)によって要素にアクセスしたり、リスト内の要素を検索したりできる
 	public List<LoginDTO> loginDTOList = new ArrayList<LoginDTO>();
 
 	//①クラス、メソッドの定義

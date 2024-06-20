@@ -29,8 +29,16 @@ public class LoginAction extends ActionSupport implements SessionAware {
 	private String password;
 
 	//インスタンス化
+	//ArrayList=public ArrayList() 初期容量10で空のリストを作成
+	//java.util.List<LoginDTO>順序付けられたコレクション。シーケンスとも呼ばれる。
+	//このインタフェースのユーザーは、リスト内のどこに各要素が挿入されるかを精密に制御できる。
+	//ユーザーは整数値のインデックス(リスト内の位置)によって要素にアクセスしたり、リスト内の要素を検索したりできる
 	private List<LoginDTO> loginDTOList = new ArrayList<LoginDTO>();
 
+	//session=あるグループが共通の活動を行う〕集まり、集会
+	//Map<String, Object>=キーを値にマッピングするオブジェクト。
+	//マップには、同一のキーを複数登録できない。各キーは1つの値にしかマッピングできません。
+    //このインタフェースは、インタフェースというよりむしろ完全に抽象クラスであったDictionaryクラスに代わるものです
 	private Map<String, Object> session;
 
 	//メソッド名は「execute」
@@ -52,6 +60,10 @@ public class LoginAction extends ActionSupport implements SessionAware {
 		loginDTOList = dao.select(username, password);
 
 		//aとbが共にtrueの時に処理を実行するそうでない場合はエラー
+		//「this を使う場所 は フィールド変数名の 頭!
+		//また、this は クラス内のメソッドの定義の中でのみ使用できる
+		//thisはメソッドが呼ばれた時に、そのメソッドを呼び出しているインスタンスに置き換えられる
+		//フィールドを宣言するとき、「 public 」や「 private 」などの アクセス修飾子 を記述
 		if (this.username.equals(loginDTOList.get(0).getUsername()) && this.password.equals(loginDTOList.get(0).getPassword())) {
 
 			session.put("loginDTOList", loginDTOList);

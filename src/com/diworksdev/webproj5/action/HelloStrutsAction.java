@@ -24,9 +24,16 @@ public class HelloStrutsAction extends ActionSupport implements SessionAware {
 
 	//インスタンス化=コピーしたものを変数に代入
 	//カプセル化、private=自分のクラスのみ
+	//ArrayList=public ArrayList() 初期容量10で空のリストを作成
+	//java.util.List<LoginDTO>順序付けられたコレクション。シーケンスとも呼ばれる。
+	//このインタフェースのユーザーは、リスト内のどこに各要素が挿入されるかを精密に制御できる。
+	//ユーザーは整数値のインデックス(リスト内の位置)によって要素にアクセスしたり、リスト内の要素を検索したりできる
 	private List<HelloStrutsDTO> helloStrutsDTOList = new ArrayList<HelloStrutsDTO>();
 
 	//session=あるグループが共通の活動を行う〕集まり、集会
+	//Map<String, Object>=キーを値にマッピングするオブジェクト。
+	//マップには、同一のキーを複数登録できない。各キーは1つの値にしかマッピングできません。
+    //このインタフェースは、インタフェースというよりむしろ完全に抽象クラスであったDictionaryクラスに代わるものです。
 	private Map<String, Object> session;
 
 	//メソッド名は「execute」
