@@ -113,6 +113,7 @@ public class LoginAction extends ActionSupport implements SessionAware {
 	//フィールド変数に対応したgetterとsetterを定義
 	//Actionクラスから呼び出され、sessionフィールドの値をsessionに渡す
 	public Map<String, Object> getSession() {
+		System.out.println("call: getSession()");
 		return session;
 
 	}
@@ -120,6 +121,7 @@ public class LoginAction extends ActionSupport implements SessionAware {
 	//フィールド変数に対応したgetterとsetterを定義
 	//DAOクラスから呼び出され、引数として受け取ったテーブルの値を自身のusernameフィールドに格納
 	public void setSession(Map<String, Object> session) {
+		System.out.println("call: setSession()");
 		this.session = session;
 
 	}
